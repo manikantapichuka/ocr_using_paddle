@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  paddleocr:
+    build:
+      context: ./paddleocr
+    image: paddleocrimagetest-paddleocr:latest
+    volumes:
+      - D:/Manikanta/PaddleOcrImageTest/paddleocr:/app
+      - C:/Users/user/Desktop/Photos:/app/photos
+    working_dir: /app
+    container_name: paddleocr_service
+    ports:
+      - "5000:5000"
+    restart: always
